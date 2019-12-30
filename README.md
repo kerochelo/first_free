@@ -61,6 +61,13 @@ $ docker-compose exec web rails db:migrate
 $ docker-compose exec web rails db:seed
 ```
 
+- environment variables
+
+下記コマンドでコピーして自分の環境に合わせて設定してください。  
+
+```
+$ cp .env.default .env
+```
 
 ## rules
 ### git
