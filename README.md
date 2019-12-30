@@ -69,6 +69,12 @@ $ docker-compose exec web rails db:seed
 $ cp .env.default .env
 ```
 
+### postgresqlバージョンダウンによる対応方法
+
+コマンド`$ docker-compose up -d`でdocker-compose.ymlを読み込んでdb構築するが、すでに構築している場合はpostgresqlバージョンエラーが発生する場合は、  
+tmp/dbディレクトリのバックアップをとり、削除したのちに`$ docker-compose up -d`でコンテナを立ち上げる。
+
+
 ## rules
 ### git
 - 利用ツール  
