@@ -49,10 +49,10 @@ $ cp config/database.yml.default config/database.yml
 $ docker-compose exec web rails db:create
 ```
 
-- migration
+- ridgepole(migration)
 
 ```
-$ docker-compose exec web rails db:migrate
+$ docker-compose exec web bundle exec rails ridgepole:apply
 ```
 
 - insert seed data
@@ -68,6 +68,21 @@ $ docker-compose exec web rails db:seed
 ```
 $ cp .env.default .env
 ```
+
+### ridgepole rakeタスクコマンド
+
+- Schemafile適用
+
+```
+$ docker-compose exec web bundle exec rails ridgepole:apply
+```
+
+- SchemafileにDB情報反映
+
+```
+$ docker-compose exec web bundle exec rails ridgepole:export
+```
+
 
 ### postgresqlバージョンダウンによる対応方法
 

@@ -28,6 +28,9 @@ gem 'turbolinks', '~> 5'
 # authentic login
 gem 'sorcery'
 
+# db schema
+gem 'ridgepole'
+
 # Font
 gem 'rails-i18n', '~> 6.0.0'
 
